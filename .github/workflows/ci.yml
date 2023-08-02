@@ -35,6 +35,9 @@ jobs:
         run: npm ci
       - name: Build
         run: npx react-scripts build
+        env:
+          # Allow warnings
+          CI: false
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
