@@ -25,10 +25,10 @@ jobs:
           repository: 'roc-lang/roc'
       - name: Setup Node
         uses: actions/setup-node@v3
-        working-directory: ${{ env.DIR }}
         with:
           node-version: "16"
           cache: npm
+          cache-dependency-path: ${{ env.DIR }}/package-lock.json
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Install Dependencies
